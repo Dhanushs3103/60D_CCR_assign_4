@@ -16,15 +16,9 @@ export default function Navbar() {
       <Spacer />
       <Link to='/contact'>Contact </Link>
       <Spacer />
-      <Link to='/login'>Login </Link>
-      <Spacer />
       <Link to='/tickets'>Tickets </Link>
       <Spacer />
-      <Link to='/tickets/create'>Create ticket </Link>
-      <Spacer />
-      <Link to='/tickets/:id'> View ticket </Link>
-      <Spacer />
-      <Link to='/tickets/:id/edit'>Edit ticket</Link>
+      <Link to='/login'>Login </Link>
       <Spacer />
     </Flex>
   )
