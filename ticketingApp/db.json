@@ -2,82 +2,82 @@
     "data": [
         {
             "id": 1,
-            "title": "create a navbar",
+            "title": "Create a navbar",
             "priority": 8,
             "status": "Pending",
-            "description": "create a navbar with login and logout functionality",
+            "description": "develop RESTful API endpoints for the application",
             "assignee": "Rocky"
         },
         {
             "id": 2,
-            "title": "develop a landing page",
+            "title": "Develop a landing page",
             "priority": 5,
             "status": "Completed",
-            "description": "design and implement the landing page with responsive design",
+            "description": "Design and implement the landing page with responsive design",
             "assignee": "Sophia"
         },
         {
             "id": 3,
-            "title": "setup database",
+            "title": "Setup database",
             "priority": 9,
-            "status": "Pending",
-            "description": "create and configure the database with necessary tables",
+            "status": "Progress",
+            "description": "Create and configure the database with necessary tables",
             "assignee": "Liam"
         },
         {
             "id": 4,
-            "title": "integrate payment gateway",
+            "title": "Integrate payment gateway",
             "priority": 7,
             "status": "Pending",
-            "description": "integrate payment gateway for processing transactions",
+            "description": "Integrate payment gateway for processing transactions",
             "assignee": "Emma"
         },
         {
             "id": 5,
-            "title": "implement user authentication",
+            "title": "Implement user authentication",
             "priority": 9,
             "status": "Completed",
-            "description": "set up user authentication and authorization",
+            "description": "Set up user authentication and authorization",
             "assignee": "Olivia"
         },
         {
             "id": 6,
-            "title": "create API endpoints",
+            "title": "Create API endpoints",
             "priority": 6,
-            "status": "Pending",
-            "description": "develop RESTful API endpoints for the application",
+            "status": "Progress",
+            "description": "Develop RESTful API endpoints for the application",
             "assignee": "Noah"
         },
         {
             "id": 7,
-            "title": "design user profile page",
+            "title": "Design user profile page",
             "priority": 4,
             "status": "Pending",
-            "description": "create a user profile page with editable information",
+            "description": "Create a user profile page with editable information",
             "assignee": "Ava"
         },
         {
             "id": 8,
-            "title": "implement search functionality",
+            "title": "Implement search functionality",
             "priority": 5,
             "status": "Completed",
-            "description": "add search functionality to allow users to find content easily",
+            "description": "Add search functionality to allow users to find content easily",
             "assignee": "William"
         },
         {
             "id": 9,
-            "title": "optimize website performance",
+            "title": "Optimize website performance",
             "priority": 7,
             "status": "Pending",
-            "description": "improve website load times and performance",
+            "description": "Improve website load times and performance",
             "assignee": "James"
         },
         {
             "id": 10,
-            "title": "write unit tests",
+            "title": "Write unit tests",
             "priority": 3,
             "status": "Pending",
-            "description": "write unit tests for critical components",
+            "description": "Write unit tests for critical components",
             "assignee": "Mia"
         }
     ]

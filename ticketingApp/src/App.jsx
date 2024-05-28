@@ -2,15 +2,14 @@
 import React from 'react'
 
 // local imports
-import './App.css'
-import AllRoutes from './Components/AllRoutes'
-import Navbar from './Components/Navbar'
+import AllRoutes from './Components/AllRoutes' // import AllRoutes
+import Navbar from './Components/Navbar' // import Navbar
 
 function App() {
   return (
     <>
-      <Navbar />
-      <AllRoutes />
+      <Navbar /> {/*Navbar component */}
+      <AllRoutes /> {/*AllRoutes component */}
     </>
   )
 }
