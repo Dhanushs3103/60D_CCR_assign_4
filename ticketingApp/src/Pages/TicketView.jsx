@@ -104,7 +104,7 @@ export default function TicketView() {
           <CardBody>
             <Stack mt="6" spacing="3">
               <Heading size="md" id="title">
-               Title:  {ticket.title}
+                Title: {ticket.title}
               </Heading>
               <hr />
               <Text id="description" fontSize={"18px"} fontWeight={"500"}>

@@ -11,6 +11,7 @@ import Tickets from '../Pages/Tickets' // import Tickets.jsx
 import TicketView from '../Pages/TicketView' // import TicketView.jsx
 import TicketCreate from '../Pages/TicketCreate' // import TicketCreate.jsx
 import TicketEdit from '../Pages/TicketEdit' // import TicketEdit.jsx
+import PrivateRoute from "./PrivateRoute" // import PrivateRoute.jsx
 
 
 export default function AllRoutes() {
@@ -21,10 +22,10 @@ export default function AllRoutes() {
       <Route path="/about" element={<About />} />  {/* Route for about page*/}
       <Route path="/contact" element={<Contact />} /> {/* Route for contact page*/}
       <Route path="/login" element={<Login />} /> {/* Route for login page*/}
-      <Route path="/tickets" element={<Tickets />} /> {/* Route for tickets page*/}
-      <Route path="/tickets/view/:ticketId" element={<TicketView />} /> {/* Route for ticket View page*/}
-      <Route path="/tickets/createTicket" element={<TicketCreate />} /> {/* Route for ticket create page*/}
-      <Route path="tickets/view/edit/:ticketId" element={<TicketEdit />} /> {/* Route for ticket edit page*/}
+      <Route path="/tickets" element={<PrivateRoute><Tickets /></PrivateRoute>} /> {/* Route for tickets page*/}
+      <Route path="/tickets/view/:ticketId" element={<PrivateRoute><TicketView /></PrivateRoute>} /> {/* Route for ticket View page*/}
+      <Route path="/tickets/createTicket" element={<PrivateRoute><TicketCreate /></PrivateRoute>} /> {/* Route for ticket create page*/}
+      <Route path="tickets/view/edit/:ticketId" element={<PrivateRoute><TicketEdit /></PrivateRoute>} /> {/* Route for ticket edit page*/}
     </Routes>
       
     </>

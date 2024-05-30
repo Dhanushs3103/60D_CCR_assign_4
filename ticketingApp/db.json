@@ -1,12 +1,12 @@
 {
   "data": [
     {
-      "id": 1,
       "title": "Create a navbar",
       "priority": 8,
-      "status": "Pending",
+      "status": "Completed",
       "description": "Create a navbar with login and logout functionality",
-      "assignee": "Rocky"
+      "assignee": "Rocky",
+      "id": 1
     },
     {
       "id": 2,
@@ -15,14 +15,6 @@
       "status": "Completed",
       "description": "Design and implement the landing page with responsive design",
       "assignee": "Sophia"
-    },
-    {
-      "id": 3,
-      "title": "Setup database",
-      "priority": 9,
-      "status": "Pending",
-      "description": "Create and configure the database with necessary tables",
-      "assignee": "Liam"
     },
     {
       "id": 4,
@@ -79,6 +71,22 @@
       "status": "Pending",
       "description": "Write unit tests for critical components",
       "assignee": "Mia"
+    },
+    {
+      "title": "Add masai logo",
+      "priority": 5,
+      "status": "Pending",
+      "description": "Add masai logo to LMS and make it visually appeal",
+      "assignee": "Rocky",
+      "id": 11
+    },
+    {
+      "title": "Say hellodrhbtymuki",
+      "priority": 6,
+      "status": "Pending",
+      "description": "hjkn,m",
+      "assignee": "William",
+      "id": 12
     }
   ]
 }

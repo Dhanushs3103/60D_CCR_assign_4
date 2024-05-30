@@ -6,11 +6,14 @@ import { BrowserRouter } from "react-router-dom";
 
 // local imports
 import App from "./App.jsx";
+import AuthContextProvider from "./Components/AuthContextProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </BrowserRouter>
+  <AuthContextProvider> {/*Wrapping AuthContextProvider component*/}
+    <BrowserRouter>  {/*Wrapping BrowserRouter component*/}
+      <ChakraProvider>  {/*Wrapping ChakraProvider*/}
+        <App />
+      </ChakraProvider>
+    </BrowserRouter>
+  </AuthContextProvider>
 );
