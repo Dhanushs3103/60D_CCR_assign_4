@@ -104,7 +104,7 @@ export default function TicketView() {
           <CardBody>
             <Stack mt="6" spacing="3">
               <Heading size="md" id="title">
-                {ticket.title}
+               Title:  {ticket.title}
               </Heading>
               <hr />
               <Text id="description" fontSize={"18px"} fontWeight={"500"}>
@@ -147,8 +147,8 @@ export default function TicketView() {
                 colorScheme="green"
                 p={"15px 25px"}
                 fontSize={"18px"}
-                onClick={()=> {
-                  navigate(`/tickets/view/edit/${ticketId}`)
+                onClick={() => {
+                  navigate(`/tickets/view/edit/${ticketId}`);
                 }}
               >
                 Edit Ticket
@@ -174,8 +174,8 @@ export default function TicketView() {
         fontSize={"18px"}
         marginLeft={"635px"}
         marginTop={"20px"}
-        onClick={()=> {
-          navigate("/tickets")
+        onClick={() => {
+          navigate("/tickets");
         }}
       >
         Back to Tickets
