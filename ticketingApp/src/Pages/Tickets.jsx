@@ -13,7 +13,7 @@ import {
   CardFooter,
   Container,
   Select,
-} from "@chakra-ui/react"; // importing button from @chakra-ui/react
+} from "@chakra-ui/react"; // importing chakra ui items3 from @chakra-ui/react
 import {useNavigate} from "react-router-dom";
 
 // URl for API
@@ -125,7 +125,7 @@ export default function Tickets() {
           {tickets.map((ticket) => {
             let { title, status, priority, id } = ticket;
             return (
-              <Card width={"300px"} backgroundColor={"white"} key={id} boxShadow={ "rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em"}>
+              <Card width={"300px"} backgroundColor={"white"} key={id} p={1} boxShadow={ "rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em"}>
                 <CardHeader
                   width={"fit-content"}
                   padding={"16px 14px 10px 20px"}
@@ -135,6 +135,7 @@ export default function Tickets() {
                     {title}
                   </Heading>
                 </CardHeader>
+                <hr />
                 <CardBody padding={"16px 14px 10px 20px"} width={"fit-content"}>
                   <Text fontSize={18} width={"fit-content"}>
                     Status: <span  style={{color: status == "Pending" ? "red" : status == "Progress" ? "orange" : "green", fontWeight: status == "Pending" ? "bolder" : status == "Progress" ? "500" : "600"}}>{status} {status == "Completed" ? "✅" : ""}</span>
