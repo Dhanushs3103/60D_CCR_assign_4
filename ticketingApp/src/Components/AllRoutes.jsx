@@ -24,7 +24,7 @@ export default function AllRoutes() {
       <Route path="/tickets" element={<Tickets />} /> {/* Route for tickets page*/}
       <Route path="/tickets/view/:ticketId" element={<TicketView />} /> {/* Route for ticket View page*/}
       <Route path="/tickets/createTicket" element={<TicketCreate />} /> {/* Route for ticket create page*/}
-      <Route path="/tickets/view/:ticketId/edit" element={<TicketEdit />} /> {/* Route for ticket edit page*/}
+      <Route path="tickets/view/edit/:ticketId" element={<TicketEdit />} /> {/* Route for ticket edit page*/}
     </Routes>
       
     </>

@@ -1,14 +1,14 @@
 // Packages
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import {
   Button,
   Card,
   Stack,
   ButtonGroup,
-  Divider,
+  useToast,
   Heading,
   CardBody,
   Text,
@@ -27,20 +27,45 @@ export default function TicketView() {
   let [ticket, setTicket] = useState([]); // state for storing tickets data.
   let [loading, setLoading] = useState(false); // state for loading ticket.status.
   let [error, setError] = useState(false); // state for error ticket.status.
+  let toast = useToast(); // invocking the useToast hook from chakra ui.
+  let navigate = useNavigate(); //invocking the useNavigate hook for the pupose of navigation.
 
   async function getData(ticketId) {
     // function for fetching data.
     setLoading(true);
-
     try {
       let data = await axios({
         method: "GET",
-        url: API_URL,
-        params: { id: ticketId },
+        url: `${API_URL}/${ticketId}`,
       });
       setLoading(false);
-      setTicket(data?.data[0]);
-      console.log(data?.data[0]);
+      setTicket(data?.data);
+      // console.log(data?.data);
+    } catch (error) {
+      setError(true);
+      setLoading(false);
+      console.log(error);
+    }
+  }
+
+  async function handleDelete() {
+    // function to delete the ticket
+    setLoading(true);
+    try {
+      let data = await axios({
+        method: "delete",
+        url: `${API_URL}/${ticketId}`,
+      });
+      if (data.status === 200) {
+        toast({
+          title: `Ticket deleted successfully`,
+          status: "success",
+          isClosable: true,
+          duration: 2000,
+        });
+        setTicket(null);
+        navigate("/tickets");
+      }
     } catch (error) {
       setError(true);
       setLoading(false);
@@ -122,21 +147,48 @@ export default function TicketView() {
                 colorScheme="green"
                 p={"15px 25px"}
                 fontSize={"18px"}
+                onClick={()=> {
+                  navigate(`/tickets/view/edit/${ticketId}`)
+                }}
               >
-                Edit
+                Edit Ticket
               </Button>
               <Button
                 variant="solid"
                 colorScheme="red"
                 p={"15px 25px"}
                 fontSize={"18px"}
+                onClick={handleDelete}
               >
-                Delete
+                Delete Ticket
               </Button>
             </ButtonGroup>
           </CardFooter>
         </Card>
       )}
+
+      <Button
+        variant="solid"
+        colorScheme="blue"
+        p={"15px 25px"}
+        fontSize={"18px"}
+        marginLeft={"635px"}
+        marginTop={"20px"}
+        onClick={()=> {
+          navigate("/tickets")
+        }}
+      >
+        Back to Tickets
+      </Button>
     </>
   );
 }
+
+// {
+//   "id": 4,
+//   "title": "Integrate payment gateway",
+//   "priority": 7,
+//   "status": "Pending",
+//   "description": "Integrate payment gateway for processing transactions",
+//   "assignee": "Emma"
+//   },
