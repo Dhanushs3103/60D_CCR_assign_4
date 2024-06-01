@@ -7,10 +7,10 @@ import Navbar from './Components/Navbar' // import Navbar
 
 function App() {
   return (
-    <>
-      <Navbar /> {/*Navbar component */}
+    <div >
+      <Navbar style={{position:"relative"}}/> {/*Navbar component */}
       <AllRoutes /> {/*AllRoutes component */}
-    </>
+    </div>
   )
 }
 
